@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chalupa Chotár</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        header {
+            background-image: url('pozadie.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        nav {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            padding: 0;
+        }
+
+        nav ul li {
+            font-size: 1.2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Styling for the price table */
+        .price-table {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+        }
+
+        .price-table th, .price-table td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .price-table th {
+            background-color: #f8f8f8;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .price-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .price-table tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <h1>Vitajte na Chalupe Chotár</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">O nás</a></li>
+                <li><a href="#accommodation">Ubytovanie</a></li>
+                <li><a href="#gallery">Galéria</a></li>
+                <li><a href="#price">Cenník</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#mapa">Mapa</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="about" class="content-section">
+    <h2 class="section-title">O nás</h2>
+    <p class="section-description">Chalupa Chotár ponúka luxusné ubytovanie v srdci prírody, s nádherným výhľadom na okolité hory. Užite si nezabudnuteľný pobyt v pokojnom prostredí.</p>
+</section>
+
+<section id="accommodation" class="content-section">
+    <h2 class="section-title">Ubytovanie</h2>
+    <p class="section-description">Utulná, moderne zariadená Chata Chotár sa nachádza v obľúbenej a turistami vyhľadávanej obci Terchová. Krásne okolité tiché prostredie Vám zaručí dokonalý relax. Mnohé atrakcie a turistické lokality sú veľkým lákadlom nášho regiónu Slovenska...</p>
+</section>
+
+<section id="gallery" class="content-section">
+    <h2 class="section-title">Galéria</h2>
+    <div class="gallery">
+        <img src="IMG_0084.jpg" alt="Chalupa Chotár 1">
+        <img src="kuchyna.jpg" alt="Chalupa Chotár 2">
+        <img src="kupelna.jpg" alt="Chalupa Chotár 3">
+    </div>
+</section>
+
+<section id="price" class="content-section">
+    <h2 class="section-title">Cenník</h2>
+    <table class="price-table">
+        <tr>
+            <th>Typ ubytovania</th>
+            <th>Sezóna</th>
+            <th>Cena za noc</th>
+        </tr>
+        <tr>
+            <td>Celá chalupa (max 14 osôb)</td>
+            <td>Letná sezóna</td>
+            <td>200€</td>
+        </tr>
+        <tr>
+            <td>Celá chalupa (max 14 osôb)</td>
+            <td>Zimná sezóna</td>
+            <td>250€</td>
+        </tr>
+        <tr>
+            <td>Celá chalupa (max 14 osôb)</td>
+            <td>Mimo sezóny</td>
+            <td>180€</td>
+        </tr>
+        <tr>
+            <td>Prístelka</td>
+            <td>Celoročne</td>
+            <td>15€</td>
+        </tr>
+    </table>
+</section>
+
+<section id="mapa" class="content-section map-container">
+    <h2 class="section-title">Mapa</h2>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.5197164087276!2d19.03700961498211!3d49.27232827933043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47144feefcca6d0b%3A0x90abb4e30ab76280!2sChalupa%20Chot%C3%A1r!5e0!3m2!1ssk!2ssk!4v1696690095956!5m2!1ssk!2ssk"
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</section>
+
+<footer id="contact">
+    <p>&copy; 2024 Chalupa Chotár | Kontakt: 
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mlakyterchova@gmail.com" 
+           target="_blank" 
+           style="color: #0394fb;">mlakyterchova@gmail.com</a><br>
+    </p>
+</footer>
+
+</body>
+</html>
