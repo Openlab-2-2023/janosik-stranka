@@ -1,0 +1,1 @@
+# stranka-janosik
