@@ -1,1 +1,1 @@
-# stranka-janosik
+# janosik-stranka
