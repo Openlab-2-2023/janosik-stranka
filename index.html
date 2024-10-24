@@ -14,7 +14,7 @@
         }
 
         header {
-            background-image: url('pozadie.jpg');
+            background-image: url('./images/pozadie.jpg');
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -24,6 +24,7 @@
             align-items: center;
             text-align: center;
         }
+        
 
         header h1 {
             font-size: 4rem;
@@ -35,16 +36,20 @@
             top: 20px;
             left: 50%;
             transform: translateX(-50%);
+            width: auto; 
         }
 
         nav ul {
             display: flex;
+            justify-content: center; 
             list-style: none;
-            gap: 30px;
             padding: 0;
+            gap: 30px;
+            flex-wrap: nowrap;
         }
 
         nav ul li {
+            white-space: nowrap;
             font-size: 1.2rem;
         }
 
@@ -101,15 +106,15 @@
         footer p {
             margin: 0;
         }
-
-        /* Styling for the price table */
+       
         .price-table {
             margin-top: 30px;
             width: 100%;
-            max-width: 800px;
+            max-width: 800px; 
             margin-left: auto;
             margin-right: auto;
             border-collapse: collapse;
+            
         }
 
         .price-table th, .price-table td {
@@ -132,6 +137,73 @@
         .price-table tr:hover {
             background-color: #ddd;
         }
+
+        
+    .attractions-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .attraction-item {
+        text-align: center;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .attraction-item img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .attraction-item p {
+        font-size: 1.1rem;
+        margin: 0;
+    }
+
+    .attraction-item span {
+        color: #555;
+        font-size: 0.9rem;
+    }
+
+    .star-rating {
+    font-size: 2rem;
+    color: #ffd700; /* Farba hviezd */
+    cursor: pointer;
+}
+
+.star-rating .star {
+    display: inline-block;
+}
+
+textarea {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#submitReview {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submitReview:hover {
+    background-color: #45a049;
+}
+
     </style>
 </head>
 <body>
@@ -145,7 +217,9 @@
                 <li><a href="#accommodation">Ubytovanie</a></li>
                 <li><a href="#gallery">Galéria</a></li>
                 <li><a href="#price">Cenník</a></li>
+                <li><a href="#evaluation">Hodnotenia</a></li>
                 <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#atraction">Atrakcie v okolí</a></li>
                 <li><a href="#mapa">Mapa</a></li>
             </ul>
         </nav>
@@ -154,20 +228,25 @@
 
 <section id="about" class="content-section">
     <h2 class="section-title">O nás</h2>
-    <p class="section-description">Chalupa Chotár ponúka luxusné ubytovanie v srdci prírody, s nádherným výhľadom na okolité hory. Užite si nezabudnuteľný pobyt v pokojnom prostredí.</p>
+    <p class="section-description">Útulná, moderne zariadená Chata Chotár sa nachádza v obľúbenej a turistami vyhľadávanej obci Terchová. Krásne okolité tiché prostredie Vám zaručí dokonalý relax. Mnohé atrakcie a turistické lokality sú veľkým lákadlom nášho regiónu Slovenska. Radi u nás uvítame rodiny s deťmi, partie priateľov a známych, cyklistov, turistov, lyžiarov.
+    </p>
 </section>
 
 <section id="accommodation" class="content-section">
     <h2 class="section-title">Ubytovanie</h2>
-    <p class="section-description">Utulná, moderne zariadená Chata Chotár sa nachádza v obľúbenej a turistami vyhľadávanej obci Terchová. Krásne okolité tiché prostredie Vám zaručí dokonalý relax. Mnohé atrakcie a turistické lokality sú veľkým lákadlom nášho regiónu Slovenska...</p>
+    <p class="section-description">Celoročne Vás ubytujeme s celkovou kapacitou 14 lôžok. Spoločenská miestnosť s televízorom s káblovým príjmom, pohovkou a spoločenskými hrami Vám poskytuje priestor na trávenie spoločného času. Je prepojená s kuchynskou časťou, kde sa nachádza elektrická rúra, rýchlovarná kanvica, chladnička s mrazničkou, umývačka riadu, indukčná varná doska a jedálenské posedenie. Spánok si vychutnáte v šiestich izbách, jednej 2-lôžkovej s dvomi samostatnými lôžkami, troch 2-lôžkových s manželskou posteľou a dvoch 3-lôžkových s manželskou posteľou a samostatným lôžkom. V prípade záujmu Vám doložíme detskú postieľku a detskú jedálenskú stoličku. Bezplatné WiFi pripojenie na internet je samozrejmosťou.
+
+        Zo spoločenskej miestnosti vyjdete na terasu, kde sa nachádza vonkajšie posedenie, plynový gril a kotlík na guláš. Pre deti máme k dispozícii hračky. V prípade, že prídete z vlastnými lyžami, poskytneme Vám priestor na ich uskladnenie. Bezplatné parkovanie je zabezpečené pri objekte pre 4 vozidlá.
+        
+        Deti sa potešia výletu k Drevenému betlehemu Terchová, jazde Terchovským vláčikom, Lanovému Parku Dino Adventure aj Mini ZOO Terchová. Oddych si doprajete v Relaxačnom centre Terchovec. Viac či menej náročná turistika Vás čaká pri prechádzke k Rozhľadni Terchovské srdce, Soche Juraja Jánošíka, Kalvárii v Terchovej, Jánošíkovým dieram či pri zdolaní Malého a Veľkého Rozsutca. V zime si užijete lyžovačku na zjazdovkách niektorého z centier Ski Gavurky, Vrátna Free Time Zone, Snow Sun Vadičov alebo Ski centrum Kozinec.</p>
 </section>
 
 <section id="gallery" class="content-section">
     <h2 class="section-title">Galéria</h2>
     <div class="gallery">
-        <img src="IMG_0084.jpg" alt="Chalupa Chotár 1">
-        <img src="kuchyna.jpg" alt="Chalupa Chotár 2">
-        <img src="kupelna.jpg" alt="Chalupa Chotár 3">
+        <img src="./images/IMG_0084.jpg" alt="Chalupa Chotár 1">
+        <img src="./images/kuchyna.jpg" alt="Chalupa Chotár 2">
+        <img src="./images/kupelna.jpg" alt="Chalupa Chotár 3">
     </div>
 </section>
 
@@ -202,6 +281,79 @@
     </table>
 </section>
 
+<section id="evaluation" class="content-section">
+    <h2 class="section-title">Hodnotenia</h2>
+    
+    <!-- Sekcia pre hodnotenie -->
+    <div class="rating-section">
+        <div class="star-rating">
+            <span class="star" data-value="5">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="1">&#9733;</span>
+        </div>
+        
+        <textarea id="reviewText" placeholder="Napíšte recenziu..." rows="5" cols="50"></textarea>
+        <button id="submitReview">Odoslať recenziu</button>
+    </div>
+
+    <!-- Zobrazenie užívateľských hodnotení -->
+    <div id="reviews">
+        <h3>Recenzie:</h3>
+        <div id="userReviews"></div>
+    </div>
+</section>
+
+
+<section id="atraction" class="content-section">
+    <h2 class="section-title">Atrakcie v okolí</h2>
+    <p class="section-description">Vzdialenosti sú uvedené vzdušnou čiarou.</p>
+    <div class="attractions-grid">
+        <div class="attraction-item">
+            <img src="./images/rozhladna-terchovske-srdce.webp" alt="Rozhľadňa Terchovské srdce">
+            <p>Rozhľadňa Terchovské srdce</p>
+            <span>1,5 km</span>
+        </div>
+        <div class="attraction-item">
+            <img src="./images/ski-gavurky.webp" alt="Ski Gavurky">
+            <p>Ski Gavurky</p>
+            <span>1,7 km</span>
+        </div>
+        <div class="attraction-item">
+            <img src="./images/dreveny-betlehem-terchova.webp" alt="Drevený betlehem Terchová">
+            <p>Drevený betlehem Terchová</p>
+            <span>1,7 km</span>
+        </div>
+        <div class="attraction-item">
+            <img src="./images/Terchovsky-vlacik.webp" alt="Terchovský vláčik">
+            <p>Terchovský vláčik</p>
+            <span>1,7 km</span>
+        </div>
+        <div class="attraction-item">
+            <img src="./images/janosikove-dni.jpg" alt="Jánošíkove dni">
+            <p>Jánošíkove dni</p>
+            <span>1,7 km</span>
+        </div>
+        <div class="attraction-item">
+            <img src="./images/muzeum_juraja_janosika.jpg" alt="Múzeum Juraja Jánošíka">
+            <p>Múzeum Juraja Jánošíka</p>
+            <span>1,8 km</span>
+        </div>
+        <div class="attraction-item">
+            <img src="./images/socha-janosik.jpg" alt="Socha Juraja Jánošíka">
+            <p>Socha Juraja Jánošíka</p>
+            <span>2,1 km</span>
+        </div>
+        <div class="attraction-item">
+            <img src="./images/lanovy-park-dino-adventure.webp" alt="Lanový Park Dino Adventure">
+            <p>Lanový Park Dino Adventure</p>
+            <span>1,9 km</span>
+        </div>
+    </div>
+</section>
+
+
 <section id="mapa" class="content-section map-container">
     <h2 class="section-title">Mapa</h2>
     <iframe 
@@ -222,6 +374,36 @@
            style="color: #0394fb;">mlakyterchova@gmail.com</a><br>
     </p>
 </footer>
+<script>
+    // Skript pre interaktívne hviezdičky
+    const stars = document.querySelectorAll('.star');
+    let rating = 0;
+
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            rating = star.getAttribute('data-value');
+            stars.forEach(s => s.style.color = '#ffd700');
+            for (let i = 0; i < 5 - rating; i++) {
+                stars[i].style.color = '#ccc';
+            }
+        });
+    });
+
+    // Funkcia na odoslanie recenzie
+    document.getElementById('submitReview').addEventListener('click', function() {
+        const reviewText = document.getElementById('reviewText').value;
+        if (rating && reviewText) {
+            const userReviews = document.getElementById('userReviews');
+            const newReview = document.createElement('div');
+            newReview.innerHTML = `<p>Hodnotenie: ${rating} hviezdičky</p><p>${reviewText}</p><hr>`;
+            userReviews.appendChild(newReview);
+            document.getElementById('reviewText').value = ''; // Vyčistenie textového poľa
+            rating = 0; // Resetovanie hodnotenia
+        } else {
+            alert('Zadajte prosím hodnotenie a recenziu.');
+        }
+    });
+</script>
 
 </body>
 </html>
