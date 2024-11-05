@@ -34,8 +34,7 @@
         nav {
             position: absolute;
             top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+            right: 20px;
             width: auto; 
         }
 
@@ -173,7 +172,7 @@
 
     .star-rating {
     font-size: 2rem;
-    color: #ffd700; /* Farba hviezd */
+    color: #ffd700; 
     cursor: pointer;
 }
 
@@ -213,14 +212,14 @@ textarea {
         <h1>Vitajte na Chalupe Chotár</h1>
         <nav>
             <ul>
-                <li><a href="#about">O nás</a></li>
-                <li><a href="#accommodation">Ubytovanie</a></li>
-                <li><a href="#gallery">Galéria</a></li>
-                <li><a href="#price">Cenník</a></li>
-                <li><a href="#evaluation">Hodnotenia</a></li>
-                <li><a href="#atraction">Atrakcie v okolí</a></li>
-                <li><a href="#mapa">Mapa</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#about">O NÁS</a></li>
+                <li><a href="#accommodation">UBYTOVANIE</a></li>
+                <li><a href="#gallery">GALÉRIA</a></li>
+                <li><a href="#price">CENNÍK</a></li>
+                <li><a href="#evaluation">HODNOTENIA</a></li>
+                <li><a href="#atraction">ATRAKCIE V OKOLÍ</a></li>
+                <li><a href="#mapa">MAPA</a></li>
+                <li><a href="#contact">KONTAKT</a></li>
             </ul>
         </nav>
     </div>
@@ -248,6 +247,7 @@ textarea {
         <img src="./images/kuchyna.jpg" alt="Chalupa Chotár 2">
         <img src="./images/kupelna.jpg" alt="Chalupa Chotár 3">
     </div>
+    
 </section>
 
 <section id="price" class="content-section">
@@ -355,7 +355,7 @@ textarea {
 
 
 <section id="mapa" class="content-section map-container">
-    <h2 class="section-title">Mapa</h2>
+    <h2 class="section-title">Mapa a poloha chaty</h2>
     <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.5197164087276!2d19.03700961498211!3d49.27232827933043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47144feefcca6d0b%3A0x90abb4e30ab76280!2sChalupa%20Chot%C3%A1r!5e0!3m2!1ssk!2ssk!4v1696690095956!5m2!1ssk!2ssk"
         width="600" 
@@ -370,27 +370,27 @@ textarea {
 <footer id="contact">
     <p>&copy; 2024 Chalupa Chotár | Kontakt:</p>
     <div class="social-links" style="text-align: center; margin-top: 10px;">
-        <!-- Email Icon -->
+        
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mlakyterchova@gmail.com" target="_blank" style="margin: 0 10px; text-decoration: none;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" 
+            <img src="/images/Gmail_icon_(2020).svg" 
                  alt="Email Logo" style="width: 30px;">
         </a>
         
-        <!-- Instagram Icon -->
-        <a href="https://www.instagram.com/vasprofil" target="_blank" style="margin: 0 10px; text-decoration: none;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
+        
+        <a href="https://www.instagram.com/chalupa_chotar/" target="_blank" style="margin: 0 10px; text-decoration: none;">
+            <img src="/images/Instagram_icon.png" 
                  alt="Instagram Logo" style="width: 30px;">
         </a>
 
-        <!-- Facebook Icon -->
-        <a href="https://www.facebook.com/vasprofil" target="_blank" style="margin: 0 10px; text-decoration: none;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+        
+        <a href="https://www.facebook.com/p/Chalupa-Chot%C3%A1r-100070509302429/?locale=sk_SK" target="_blank" style="margin: 0 10px; text-decoration: none;">
+            <img src="/images/Facebook_f_logo_(2019).svg" 
                  alt="Facebook Logo" style="width: 30px;">
         </a>
     </div>
 </footer>
 <script>
-    // Skript pre interaktívne hviezdičky
+    
     const stars = document.querySelectorAll('.star');
     let rating = 0;
 
@@ -404,7 +404,7 @@ textarea {
         });
     });
 
-    // Funkcia na odoslanie recenzie
+    
     document.getElementById('submitReview').addEventListener('click', function() {
         const reviewText = document.getElementById('reviewText').value;
         if (rating && reviewText) {
@@ -412,8 +412,8 @@ textarea {
             const newReview = document.createElement('div');
             newReview.innerHTML = `<p>Hodnotenie: ${rating} hviezdičky</p><p>${reviewText}</p><hr>`;
             userReviews.appendChild(newReview);
-            document.getElementById('reviewText').value = ''; // Vyčistenie textového poľa
-            rating = 0; // Resetovanie hodnotenia
+            document.getElementById('reviewText').value = ''; 
+            rating = 0; 
         } else {
             alert('Zadajte prosím hodnotenie a recenziu.');
         }
