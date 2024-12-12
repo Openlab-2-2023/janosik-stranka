@@ -75,17 +75,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
             }
         }
     });
-
-    // Hamburger menu toggle
-    document.addEventListener('DOMContentLoaded', () => {
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('#head-nav ul');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('open');
-            navMenu.classList.toggle('show');
-        });
-    });
-
-
 });

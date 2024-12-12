@@ -29,15 +29,19 @@ nav {
     right: 0;
     width: 100%;
     padding: 1%;
+
     &.scroll {
         position: fixed;
         background: #101010;
     }
+
     &.fixed {
         position: fixed;
         background: #101010;
-        
-    }z-index: 99;
+
+    }
+
+    z-index: 99;
 }
 
 nav ul {
@@ -86,13 +90,13 @@ section {
     text-align: justify;
 }
 
-.section-fullgallery{
+.section-fullgallery {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 
-.section-fullimg{
+.section-fullimg {
     font-size: 1.1rem;
     color: #000000;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -206,19 +210,24 @@ footer p {
 /* Kontajner obrázka */
 .image-container {
     position: relative;
-    width: 100%; /* Celá šírka */
-    height: 100vh; /* Výška cez celú obrazovku (alebo zmeniť na fixnú výšku, ak preferuješ) */
+    width: 100%;
+    /* Celá šírka */
+    height: 100vh;
+    /* Výška cez celú obrazovku (alebo zmeniť na fixnú výšku, ak preferuješ) */
     overflow: hidden;
-  }
-  
-  /* Obrázok na pozadí */
-  .background-image {
-    width: 100%; /* Obrázok sa roztiahne na šírku kontajnera */
-    height: 100%; /* Obrázok sa roztiahne na výšku kontajnera */
-    object-fit: cover; /* Zachová proporcie obrázka a vyplní celý kontajner */
+}
+
+/* Obrázok na pozadí */
+.background-image {
+    width: 100%;
+    /* Obrázok sa roztiahne na šírku kontajnera */
+    height: 100%;
+    /* Obrázok sa roztiahne na výšku kontajnera */
+    object-fit: cover;
+    /* Zachová proporcie obrázka a vyplní celý kontajner */
     display: block;
-  }
-  
+}
+
 
 /* Textový overlay */
 .text-overlay {
@@ -232,50 +241,61 @@ footer p {
     text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    opacity: 0; /* Skrytý na začiatku */
-    transform: translateY(20px); /* Posunutie dole */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Plynulý prechod */
+    opacity: 0;
+    /* Skrytý na začiatku */
+    transform: translateY(20px);
+    /* Posunutie dole */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Plynulý prechod */
 }
 
 .image-container.scrolled .text-overlay {
-    opacity: 1; /* Zobrazí sa */
-    transform: translateY(0); /* Návrat na pôvodnú pozíciu */
-  }
+    opacity: 1;
+    /* Zobrazí sa */
+    transform: translateY(0);
+    /* Návrat na pôvodnú pozíciu */
+}
 
-  .read-more-button {
+.read-more-button {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #007bff; /* Modrá farba */
-    color: #fff; /* Biele písmo */
+    background-color: #007bff;
+    /* Modrá farba */
+    color: #fff;
+    /* Biele písmo */
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
     transition: background-color 0.3s ease;
-  }
-  
-  .read-more-button:hover {
-    background-color: #0056b3; /* Tmavšia modrá pri hover */
-  }
+}
 
-  .gallery-button  {
+.read-more-button:hover {
+    background-color: #0056b3;
+    /* Tmavšia modrá pri hover */
+}
+
+.gallery-button {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #454646; /* Modrá farba */
-    color: #fff; /* Biele písmo */
+    background-color: #454646;
+    /* Modrá farba */
+    color: #fff;
+    /* Biele písmo */
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
     transition: background-color 0.3s ease;
-  }
-  
-  .gallery-button:hover {
-    background-color: #0056b3; /* Tmavšia modrá pri hover */
-  }
+}
+
+.gallery-button:hover {
+    background-color: #0056b3;
+    /* Tmavšia modrá pri hover */
+}
 
 
-  .modal {
+.modal {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -306,7 +326,8 @@ footer p {
     cursor: pointer;
 }
 
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -327,9 +348,7 @@ footer p {
 .next {
     right: 10px;
 }
-  
 
-/* Media Query for Mobile Devices */
 @media only screen and (max-width: 768px) {
     /* Adjust header content */
     .header-content {
@@ -337,7 +356,6 @@ footer p {
         align-items: center;
         text-align: center;
     }
-
     #head-nav ul {
         display: flex;
         flex-direction: column;
@@ -348,11 +366,9 @@ footer p {
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-
     #head-nav ul li {
         margin: 5px 0;
     }
-
     #head-nav ul li a {
         font-size: 1.1rem;
         padding: 10px;
@@ -363,26 +379,21 @@ footer p {
         border-bottom: 1px solid #ddd;
         transition: background-color 0.3s ease;
     }
-
     #head-nav ul li a:hover {
         background-color: #eaeaea;
     }
-
     /* Adjust sections */
     .content-section {
         padding: 20px;
     }
-
     .section-title {
         font-size: 1.5rem;
         text-align: center;
     }
-
     .section-description {
         font-size: 1rem;
         line-height: 1.5;
     }
-
     /* Gallery adjustments */
     .gallery {
         display: flex;
@@ -390,115 +401,40 @@ footer p {
         gap: 10px;
         justify-content: center;
     }
-
     .gallery-img {
         width: 100%;
         max-width: 200px;
         height: auto;
     }
-
     /* Table adjustments */
     .price-table {
         width: 100%;
         font-size: 0.9rem;
     }
-
     .price-table th, .price-table td {
         padding: 10px;
         text-align: center;
     }
-
     /* Attractions grid adjustments */
     .attractions-grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 15px;
     }
-
     .attraction-item {
         text-align: center;
     }
-
     /* Map adjustments */
     .map-container iframe {
         width: 100%;
         height: 300px;
     }
-
     /* Footer adjustments */
     footer {
         text-align: center;
         font-size: 0.9rem;
     }
-
     .social-links a {
         margin: 0 5px;
     }
 }
-
-/* Media Query for Mobile Devices */
-@media only screen and (max-width: 768px) {
-    /* Hide the default navigation bar */
-    #head-nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        border-top: 1px solid #ddd;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 10;
-    }
-
-    #head-nav ul.show {
-        display: flex;
-    }
-
-    /* Style for hamburger icon */
-    .hamburger {
-        display: block;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        position: relative;
-    }
-
-    .hamburger span {
-        display: block;
-        height: 4px;
-        width: 100%;
-        background-color: #333;
-        margin: 6px 0;
-        transition: all 0.3s ease-in-out;
-    }
-
-    /* When menu is open, animate the icon */
-    .hamburger.open span:nth-child(1) {
-        transform: translateY(10px) rotate(45deg);
-    }
-
-    .hamburger.open span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.open span:nth-child(3) {
-        transform: translateY(-10px) rotate(-45deg);
-    }
-
-    /* Center header content for mobile */
-    .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 15px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-}
-
-
-
