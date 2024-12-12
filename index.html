@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chalupa Chotár</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="module" src="index.js"></script>
 </head>
 
 <body>
@@ -13,7 +14,7 @@
     <header>
         <div class="header-content">
             <h1>Vitajte na Chalupe Chotár</h1>
-            <nav>
+            <nav id="head-nav">
                 <ul>
                     <li><a href="#about">O NÁS</a></li>
                     <li><a href="#accommodation">UBYTOVANIE</a></li>
@@ -31,7 +32,8 @@
     <section id="about" class="content-section">
         <h2 class="section-title">O nás</h2>
         <p class="section-description"><b>Útulná, moderne zariadená Chata Chotár</b> sa nachádza v obľúbenej a turistami
-            vyhľadávanej <b>obci Terchová</b>. Krásne okolité tiché prostredie Vám zaručí dokonalý relax. Mnohé atrakcie a
+            vyhľadávanej <b>obci Terchová</b>. Krásne okolité tiché prostredie Vám zaručí dokonalý relax. Mnohé atrakcie
+            a
             turistické lokality sú veľkým lákadlom nášho regiónu Slovenska. Radi u nás uvítame rodiny s deťmi, partie
             priateľov a známych, cyklistov, turistov, lyžiarov.
         </p>
@@ -40,33 +42,49 @@
     <section id="accommodation" class="content-section">
         <h2 class="section-title">Ubytovanie</h2>
         <p class="section-description">Celoročne Vás ubytujeme s celkovou <b>14 lôžok</b>. Spoločenská miestnosť s
-            televízorom s káblovým príjmom, pohovkou a spoločenskými hrami Vám poskytuje priestor na trávenie spoločného
-            času. Je prepojená s kuchynskou časťou, kde sa nachádza elektrická rúra, rýchlovarná kanvica, chladnička s
-            mrazničkou, umývačka riadu, indukčná varná doska a jedálenské posedenie. Spánok si vychutnáte v šiestich
-            izbách, jednej 2-lôžkovej s dvomi samostatnými lôžkami, troch 2-lôžkových s manželskou posteľou a dvoch
-            3-lôžkových s manželskou posteľou a samostatným lôžkom. V prípade záujmu Vám doložíme detskú postieľku a
-            detskú jedálenskú stoličku. Bezplatné WiFi pripojenie na internet je samozrejmosťou.
+            <b>televízorom s káblovým príjmom, pohovkou a spoločenskými hrami</b> Vám poskytuje priestor na trávenie spoločného
+            času. Je prepojená s kuchynskou časťou, kde sa nachádza<b> elektrická rúra, rýchlovarná kanvica, chladnička s
+            mrazničkou, umývačka riadu, indukčná varná doska a jedálenské posedenie.</b> Spánok si vychutnáte v <b>šiestich
+            izbách,</b> <b>jednej 2-lôžkovej</b> s dvomi samostatnými lôžkami, <b>troch 2-lôžkových</b> s manželskou posteľou a <b>dvoch
+            3-lôžkových</b> s manželskou posteľou a samostatným lôžkom. V prípade záujmu Vám doložíme <b>detskú postieľku</b> a
+            <b>detskú jedálenskú stoličku</b>. <b>Bezplatné WiFi</b> pripojenie na internet je samozrejmosťou.
 
-            Zo spoločenskej miestnosti vyjdete na terasu, kde sa nachádza vonkajšie posedenie, plynový gril a kotlík na
-            guláš. Pre deti máme k dispozícii hračky. V prípade, že prídete z vlastnými lyžami, poskytneme Vám priestor
+            Zo spoločenskej miestnosti vyjdete na terasu, kde sa nachádza <b>vonkajšie posedenie, plynový gril,kotlík</b> na
+            guláš a <b>detské ihrisko</b>. Pre deti máme k dispozícii hračky. V prípade, že prídete s vlastnými lyžami, poskytneme Vám priestor
             na ich uskladnenie. Bezplatné parkovanie je zabezpečené pri objekte pre <b>4 vozidlá</b>.
 
             Deti sa potešia výletu k Drevenému betlehemu Terchová, jazde Terchovským vláčikom, Lanovému Parku Dino
             Adventure. Oddych si doprajete v Relaxačnom centre Terchovec. Viac či menej náročná
             turistika Vás čaká pri prechádzke k Rozhľadni Terchovské srdce, Soche Juraja Jánošíka, Kalvárii v Terchovej,
             Jánošíkovým dieram či pri zdolaní Malého a Veľkého Rozsutca. V zime si užijete lyžovačku na zjazdovkách
-            niektorého z centier Ski Gavurky, Vrátna Free Time Zone, Snow Sun Vadičov alebo Ski centrum Kozinec.</p>
+            niektorého z centier Vrátna Free Time Zone alebo Snow Sun Vadičov.</p>
     </section>
 
     <section id="gallery" class="content-section">
         <h2 class="section-title">Galéria</h2>
         <div class="gallery">
-            <img src="./images/IMG_0084.jpg" alt="Chalupa Chotár 1">
-            <img src="./images/kuchyna.jpg" alt="Chalupa Chotár 2">
-            <img src="./images/kupelna.jpg" alt="Chalupa Chotár 3">
+            <div class="row1">
+                <img src="./images/kuchyna 2.jpg" alt="Chalupa Chotár 1" class="gallery-img">
+                <img src="./images/kuchyna.jpg" alt="Chalupa Chotár 2" class="gallery-img">
+                <img src="./images/autanok 5.jpg" alt="Chalupa Chotár 3" class="gallery-img">
+                <img src="./images/kuchyna 2.jpg" alt="Chalupa Chotár 3" class="gallery-img">
+            </div>
+            <div class="row2">
+                <img src="./images/kuchyna.jpg" alt="Chalupa Chotár 1" class="gallery-img">
+                <img src="./images/kuchyna 2.jpg" alt="Chalupa Chotár 2" class="gallery-img">
+                <img src="./images/kuchyna 2.jpg" alt="Chalupa Chotár 3" class="gallery-img">
+                <img src="./images/autanok 5.jpg" alt="Chalupa Chotár 3" class="gallery-img">
+            </div>
         </div>
-
+        <a href="./gallery.html" class="gallery-button">Zobraz kompletnú galériu</a>
     </section>
+
+    <!-- Modal na zobrazenie obrázkov -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Zväčšený obrázok">
+    </div>
+
 
     <section id="price" class="content-section">
         <h2 class="section-title">Cenník</h2>
@@ -110,8 +128,8 @@
                 <span>1,5 km</span>
             </div>
             <div class="attraction-item">
-                <img src="./images/ski-gavurky.webp" alt="Ski Gavurky">
-                <p>Ski Gavurky</p>
+                <img src="./images/u janosov.jpg" alt="Osada Jánošíkovci">
+                <p>Osada Jánošíkovci</p>
                 <span>1,7 km</span>
             </div>
             <div class="attraction-item">
@@ -145,13 +163,13 @@
                 <span>1,9 km</span>
             </div>
             <div class="attraction-item">
-                <img src="" alt="Vratna Free times">
-                <p>Lanový Park Dino Adventure</p>
+                <img src="./images/vratna.jpg" alt="Vratna">
+                <p>Vrátna Free Time Zone</p>
                 <span>1,9 km</span>
             </div>
             <div class="attraction-item">
-                <img src="" alt="Lanový Park Dino Adventure">
-                <p>Lanový Park Dino Adventure</p>
+                <img src="./images/zvonica u marunov.jpg" alt="Zvonica u Marunov">
+                <p>Zvonica u Marunov</p>
                 <span>1,9 km</span>
             </div>
         </div>
@@ -168,9 +186,20 @@
     </section>
 
     <section id="skivratna" class="ski-vratna">
-        <img src="./images/skivratna.jpg" alt="ski">
-
+        <div class="image-container">
+            <img src="./images/skivratna.jpg" alt="ski" class="background-image">
+            <div class="text-overlay">
+                <h2>V OKOLÍ</h2>
+                <p>
+                    Vrátna Malá Fatra je horské stredisko, kde si okrem tradičných zimných aktivít, môžete vychutnať aj
+                    leto. Keďže sa Vrátna nachádza v srdci národného parku Malá Fatra, najväčšou dominantou je najmä
+                    krásna príroda a dychberúce výhľady.
+                </p>
+                <a href="atrakcie.html" class="read-more-button">Čítať viac</a>
+            </div>
+        </div>
     </section>
+
 
     <footer id="contact">
         <p>&copy; 2024 Chalupa Chotár | Kontakt:</p>
