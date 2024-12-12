@@ -436,6 +436,69 @@ footer p {
     }
 }
 
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    /* Hide the default navigation bar */
+    #head-nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    #head-nav ul.show {
+        display: flex;
+    }
+
+    /* Style for hamburger icon */
+    .hamburger {
+        display: block;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .hamburger span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: #333;
+        margin: 6px 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* When menu is open, animate the icon */
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    /* Center header content for mobile */
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
 
 
 
