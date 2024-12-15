@@ -77,23 +77,45 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
     const hamburger = document.querySelector('.hamburger');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const closeBtn = document.querySelector('.close-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeBtn = document.querySelector('.close-btn');
 
-        // Open menu
-        hamburger.addEventListener('click', () => {
-            mobileMenu.style.display = 'block';
-        });
+    // Open menu
+    hamburger.addEventListener('click', () => {
+        mobileMenu.style.display = 'block';
+    });
 
-        // Close menu
-        closeBtn.addEventListener('click', () => {
+    // Close menu
+    closeBtn.addEventListener('click', () => {
+        mobileMenu.style.display = 'none';
+    });
+
+    // Close menu on outside click
+    window.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) {
+            mobileMenu.style.display = 'none';
+        }
+    });
+
+    const links = document.querySelectorAll('.mobile-menu a');
+
+    // Close menu when a link is clicked
+    links.forEach(link => {
+        link.addEventListener('click', () => {
             mobileMenu.style.display = 'none';
         });
+    });
 
-        // Close menu on outside click
-        window.addEventListener('click', (e) => {
-            if (e.target === mobileMenu) {
-                mobileMenu.style.display = 'none';
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
         });
+    });
 });
