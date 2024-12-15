@@ -349,6 +349,82 @@ footer p {
     right: 10px;
 }
 
+.map-filter-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 15px; /* Zaoblené rohy */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Jemný tieň */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-filter-wrapper:hover {
+    transform: scale(1.02); /* Jemné zväčšenie pri hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Zvýraznený tieň pri hover */
+}
+
+.map-filter-wrapper iframe {
+    border-radius: inherit; /* Zachovanie zaoblených rohov pre mapu */
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    max-width: 300px;
+    background-color: #333;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: 20px;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-menu ul li {
+    margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.mobile-menu .close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    text-align: right;
+    display: block;
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+    #head-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     /* Adjust header content */
     .header-content {
