@@ -413,22 +413,6 @@ footer p {
     text-align: right;
     display: block;
 }
-
-/* Media query for mobile */
-@media (max-width: 768px) {
-    #head-nav {
-        display: none;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .mobile-menu {
-        display: none;
-    }
-}
-
 #head-nav ul {
     list-style: none;
     margin: 0;
@@ -443,6 +427,107 @@ footer p {
 #head-nav ul li a {
     color: white;
     text-decoration: none;
+}
+
+.content-section {
+    padding: 40px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card {
+    width: 250px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+.card i {
+    font-size: 40px;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.full-equipment {
+    padding: 2em;
+    text-align: center;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+.section-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.section-subtitle {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 2em;
+}
+
+.equipment-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2em; /* Medzery medzi zoznamami */
+    justify-items: start;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.equipment-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.equipment-list li {
+    font-size: 1em;
+    margin-bottom: 1em; /* Väčšia medzera medzi riadkami */
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.equipment-list i {
+    color: #28a745;
+    margin-right: 0.5em;
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+    #head-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 768px) {
