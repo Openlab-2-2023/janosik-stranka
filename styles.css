@@ -374,7 +374,7 @@ footer p {
     position: absolute; /* Nastavenie pozície na absolútnu */
     top: 10px;          /* Vzdialenosť od horného okraja */
     left: 10px;         /* Vzdialenosť od ľavého okraja */
-    color: white;       /* Uistite sa, že je text čitateľný */
+    color: rgb(0, 0, 0);       /* Uistite sa, že je text čitateľný */
 }
 
 .mobile-menu {
@@ -514,6 +514,7 @@ footer p {
     color: #28a745;
     margin-right: 0.5em;
 }
+
 
 /* Media query for mobile */
 @media (max-width: 768px) {
